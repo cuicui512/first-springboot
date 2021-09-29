@@ -1,0 +1,27 @@
+# 修改项目的端口号
+server:
+  port: 8081
+
+# 属性值注入测试
+person:
+  name: qinjiang
+  age: 3
+  happy: false
+  birth: 2021/09/26
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - girl
+    - music
+  dog:
+    name: 旺财
+    age: 1
+
+# 配置mysql数据库
+spring:
+  datasource:
+    username: root
+    password: 123456
+    # serverTimezone=UTC解决时区的报错
+    url: jdbc:mysql://localhost:3306/employee?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver

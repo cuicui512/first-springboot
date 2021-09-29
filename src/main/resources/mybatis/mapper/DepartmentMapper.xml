@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace="com.linxin.springboot01.mapper.DepartmentMapper 需要到application.properties中整合mybatis,配置别名-->
+<mapper namespace="com.linxin.springboot01.mapper.DepartmentMapper">
+
+    <select id="getDepartments" resultType="Department">
+       select * from department;
+    </select>
+
+    <select id="getDepartment" resultType="Department" parameterType="int">
+       select * from department where id = #{id};
+    </select>
+
+</mapper>
